@@ -1,8 +1,11 @@
 def find_item_by_name_in_collection(name, collection)
-  # Implement me first!
-  #
-  # Consult README for inputs and outputs
-
+ count = 0 
+ 
+ collection.each do |grocery_item|
+   return grocery_item if grocery_item[:item] == name
+   count += 1 
+ end 
+ find_item_by_name_in_collection("Cholula", collection)
 end
 
 def consolidate_cart(cart)
